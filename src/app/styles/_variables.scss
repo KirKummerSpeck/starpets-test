@@ -1,0 +1,94 @@
+//ЦВЕТА И ДАННЫЕ
+$primary: var(--color-primary);
+$primary-hover: var(--color-primary-hover);
+$primary-active: var(--color-primary-active);
+
+$secondary: var(--color-secondary);
+
+$bg-body: var(--bg-body);
+$bg-secondary: var(--bg-secondary);
+
+$text-main: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-white: var(--text-white);
+$text-nav: var(--text-nav-default);
+
+$text-label-secondary: var(--text-label-secondary);
+
+$border: var(--border-color);
+
+// Rarities
+$r-common: var(--rarity-common);
+$r-uncommon: var(--rarity-uncommon);
+$r-rare: var(--rarity-rare);
+$r-ultra: var(--rarity-ultra-rare);
+$r-legend: var(--rarity-legendary);
+
+// UI
+$radius: var(--radius-sm);
+$shadow-1: var(--shadow-elevation-1);
+$shadow-2: var(--shadow-elevation-2);
+
+$bg-btn-disabled: var(--color-secondary);
+
+// Breakpoints
+$bp-mobile: 768px;
+$bp-tablet: 1024px;
+$bp-desktop: 1440px;
+
+//TYPOGRAPHY VARIABLES
+$fs-xs: var(--fs-xs);
+$fs-sm: var(--fs-sm);
+$fs-md: var(--fs-md);
+$fs-lg: var(--fs-lg);
+$fs-xl: var(--fs-xl);
+
+$fw-regular: var(--fw-regular);
+$fw-medium: var(--fw-medium);
+$fw-semibold: var(--fw-semibold);
+$fw-bold: var(--fw-bold);
+
+// БАЗОВЫЕ МИКСИНЫ
+@mixin text($size, $weight: $fw-regular, $lh: 1.4) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin title-h3 {
+  @include text($fs-lg, $fw-semibold, 1.5);
+  color: $text-main;
+}
+
+// Обычный текст
+@mixin text-body {
+  @include text($fs-sm, $fw-regular, 1.5);
+}
+
+// Мелкий текст
+@mixin text-caption {
+  @include text($fs-xs, $fw-regular, 1.4);
+  color: $text-secondary;
+}
+
+// обрезка текста
+@mixin text-clamp($lines: 1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90px;
+}

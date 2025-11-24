@@ -1,0 +1,47 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $bg-body;
+  color: $text-main;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+span {
+  color: var(--text-label-secondary);
+}
+
+span.label {
+  color: var(--text-primary);
+}
+
+h3 {
+  @include title-h3;
+}

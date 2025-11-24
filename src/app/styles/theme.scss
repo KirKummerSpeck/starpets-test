@@ -1,0 +1,56 @@
+:root {
+  /** ОСНОВНАЯ ТЕМА */
+  --color-primary: #fe9920;
+  --color-primary-hover: #e58a1d;
+  --color-primary-active: #ffa538;
+
+  --color-secondary: #b5b5b5;
+
+  --bg-body: #fafafa;
+  --bg-secondary: #ffffff;
+
+  --text-primary: #212121;
+  --text-secondary: #646464;
+  --text-white: #ffffff;
+
+  --text-nav-default: #838383;
+  --text-nav-active: #212121;
+
+  --border-color: #f6f6f6;
+
+  --rarity-common: #4891ff;
+  --rarity-uncommon: #7e10d4;
+  --rarity-rare: #40bb18cc;
+  --rarity-ultra-rare: #e51a2ecc;
+  --rarity-legendary: #1e1e1e;
+
+  --text-label-secondary: #b5b5b5;
+
+  --radius-sm: 8px;
+
+  /** Shadows */
+
+  /** Легкая тень для состояния покоя */
+  --shadow-elevation-1: 0px 4px 18px #00000008;
+
+  /** Тень для ховера */
+  --shadow-elevation-2: 0px 0px 18px #00000026;
+
+  // //typography
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 15px;
+  --fs-lg: 16px;
+  --fs-xl: 18px;
+  --fs-xll: 20px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.2;
+  --lh-base: 1.5;
+
+  --header-height: 82px;
+}
