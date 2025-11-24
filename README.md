@@ -1,75 +1,43 @@
-# Nuxt Minimal Starter
+# StarPets Test Task
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Тестовое задание для StarPets. Реализация каталога товаров с фильтрацией и пагинацией.
 
-## Setup
+### 🏗 Архитектура
 
-Make sure to install dependencies:
+- **Frontend:** FSD.
+- **Backend (Server):** Слоистая архитектура.
+
+**Особенности реализации:**
+
+- **Структура:** Корневая директория исходного кода — `src/`. В ней находятся слои FSD и серверная часть.
+- **Shared:** Слой `shared` используется совместно фронтендом и бекендом (типы, утилиты).
+- **Server:**
+  - Реализована имитация базы данных, хранящаяся в памяти.
+  - Пользователь захардкожен.
+  - Происходит маппинг данных, клиент получает подготовленный ответ ( товары ).
+- **Rendering:** Nuxt SSR. Первоначальная загрузка происходит на сервере.
+- **State Management:** Фильтрация и запросы реализованы через TanStack Query + Pinia.
+
+### 🛠 Технологии
+
+- **Framework:** Nuxt, Vue 3
+- **Language:** TypeScript
+- **Testing:** Vitest ( покрыл по примеру )
+- **Styles:** SCSS
+- **State/Data:** Pinia, TanStack Vue Query
+
+## 🚀 Setup & Launch
 
 ```bash
-# npm
-npm install
-
-# pnpm
+# Установка зависимостей
 pnpm install
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
+# Запуск в режиме разработки
 pnpm dev
 
-# yarn
-yarn dev
+# Запуск тестов
+pnpm test
 
-# bun
-bun run dev
+# Линтинг
+pnpm lint
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
