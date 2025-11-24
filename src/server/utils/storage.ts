@@ -7,7 +7,7 @@ class InMemoryStorage {
       userName: "StarPets LTD",
       avatar:
         "https://cdn.starpets.pw/AM/110x110/bat_dragon_146462647561927032198913846494863876793.webp",
-      balance: 1000,
+      balance: 10000,
       currency: "USD",
     },
   ];

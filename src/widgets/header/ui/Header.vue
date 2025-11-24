@@ -11,8 +11,16 @@ const userStore = useUserStore();
   <header class="header-widget">
     <div class="header-widget__left">
       <div class="header-widget__logo">
-        <img class="logo__desktop" src="/images/logo.png" alt="logo" >
-        <img class="logo__small" src="/images/logo-small.png" alt="logo" >
+        <img
+          class="logo__desktop"
+          src="@app/assets/images/logo.png"
+          alt="logo"
+        >
+        <img
+          class="logo__small"
+          src="@app/assets/images/logo-small.png"
+          alt="logo"
+        >
       </div>
 
       <HeaderNavigation class="header-widget__nav" />

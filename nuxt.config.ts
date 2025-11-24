@@ -1,6 +1,8 @@
 import { fileURLToPath } from "url";
 import svgLoader from "vite-svg-loader";
 
+import { defineNuxtConfig } from "nuxt/config";
+
 export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: "2024-11-22",

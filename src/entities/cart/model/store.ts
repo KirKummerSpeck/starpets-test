@@ -22,12 +22,14 @@ export const useCartStore = defineStore("cart", () => {
     items.value = [];
   };
 
-  const totalPrice = computed(() => {
-    return items.value.reduce((sum, item) => sum + item.price, 0);
+  const totalPriceNumber = computed(() => {
+    const sum = items.value.reduce((acc, item) => acc + item.price, 0);
+
+    return Math.round(sum * 100) / 100;
   });
 
-  const totalPriceNumber = computed(() => {
-    return items.value.reduce((sum, item) => sum + item.price, 0);
+  const totalPrice = computed(() => {
+    return totalPriceNumber.value.toFixed(2);
   });
 
   const totalItems = computed(() => items.value.length);

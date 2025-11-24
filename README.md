@@ -35,6 +35,10 @@ pnpm install
 # Запуск в режиме разработки
 pnpm dev
 
+# Запуск в режиме прода
+pnpm build
+pnpm preview
+
 # Запуск тестов
 pnpm test
 
