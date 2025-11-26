@@ -15,12 +15,12 @@ const userStore = useUserStore();
           class="logo__desktop"
           src="@app/assets/images/logo.png"
           alt="logo"
-        >
+        />
         <img
           class="logo__small"
           src="@app/assets/images/logo-small.png"
           alt="logo"
-        >
+        />
       </div>
 
       <HeaderNavigation class="header-widget__nav" />
@@ -33,7 +33,7 @@ const userStore = useUserStore();
           <span class="sub-label">Ваш баланс</span>
         </div>
 
-        <UserProfile />
+        <UserProfile :name="userStore.getName" :image="userStore.getAvatar" />
 
         <div class="header-slot-wrapper">
           <slot name="actions" />

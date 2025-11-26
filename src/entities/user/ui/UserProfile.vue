@@ -1,25 +1,28 @@
 <script lang="ts" setup>
 import Link from "@/shared/ui/Link/Link.vue";
 
-import { useUserStore } from "@/entities/user/model/store";
+interface Props {
+  name: string;
+  image: string;
+}
 
-const userStore = useUserStore();
+defineProps<Props>();
 </script>
 <template>
   <Link to="/profile">
     <div class="user-profile">
       <div class="user-profile__text">
-        <span class="user-name label">{{ userStore.getName }}</span>
+        <span class="user-name label">{{ name }}</span>
         <span class="user-role">Профиль</span>
       </div>
       <div class="user-avatar">
         <img
-          :src="userStore.getAvatar"
+          :src="image"
           alt="Avatar"
           class="user-avatar__image"
           width="56"
           height="56"
-        >
+        />
       </div></div
   ></Link>
 </template>

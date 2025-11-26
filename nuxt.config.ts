@@ -62,7 +62,7 @@ export default defineNuxtConfig({
     storesDirs: ["./src/entities/**/model", "./src/stores/**"],
   },
   runtimeConfig: {
-    marketApiUrl: "",
+    marketApiBaseUrl: "",
     public: {},
   },
 

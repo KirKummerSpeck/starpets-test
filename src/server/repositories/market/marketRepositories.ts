@@ -3,6 +3,8 @@ import type {
   IExternalRequestPayload,
 } from "@/server/models/market/external.contract";
 
+import { MARKET_ENDPOINTS } from "@/server/utils/apiEndpoints.ts";
+
 export const marketRepository = {
   async fetchItems(
     payload: IExternalRequestPayload
@@ -10,10 +12,13 @@ export const marketRepository = {
     const config = useRuntimeConfig();
 
     try {
-      const response = await $fetch<IExternalResponse>(config.marketApiUrl, {
-        method: "POST",
-        body: payload,
-      });
+      const response = await $fetch<IExternalResponse>(
+        `${config.marketApiBaseUrl}${MARKET_ENDPOINTS.FETCH_ITEMS}`,
+        {
+          method: "POST",
+          body: payload,
+        }
+      );
 
       return response;
     } catch (e) {
